@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ANTLR: generar parser",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "antlr4 -no-listener -visitor PLATA.g4"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Java: compilar",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "javac -d bin -cp .;C:/Users/Antonio/lib/antlr-4.13.2-complete.jar *.java"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "PLATA: build completo",
+            "dependsOn": [
+                "ANTLR: generar parser",
+                "Java: compilar"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "PLATA: ejecutar",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "java -cp bin;C:/Users/Antonio/lib/antlr-4.13.2-complete.jar Main ${input:archivoArg}"
+            ],
+            "dependsOn": "PLATA: build completo",
+            "group": "test",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "archivoArg",
+            "type": "promptString",
+            "description": "Ruta del fichero .arg",
+            "default": "input/datos.arg"
+        }
+    ]
+}
