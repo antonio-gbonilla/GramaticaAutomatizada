@@ -1,12 +1,22 @@
+## 1. Estructura de Carpetas Recomendada
 
-
-En este proyecto se utiliza el fichero `tasks.json` de Visual Studio Code para automatizar la generación del parser con ANTLR, la compilación del código Java y la ejecución del programa.
-
-No se emplea `launch.json` debido a que el depurador de Java de VS Code está orientado a proyectos gestionados con Maven o Gradle, y no permite un control fiable del classpath ni de la ubicación de los archivos compilados cuando se utiliza compilación manual con `javac`.
-
-El uso de `tasks.json` garantiza que los comandos se ejecuten exactamente igual que en la terminal, proporcionando un entorno de ejecución estable, reproducible y fácil de entender.
-
-Además se utiliza el fichero `settings`par añadir los jar al fichero y configuracion del autogurado.
+tuProyecto/
+│
+├─ PLATA.g4            ← Gramática ANTLR principal
+├─ PlataLexer.g4        ← Lexer ANTLR
+├─ Main.java            ← Clase principal
+├─ MiVisitor.java       ← Visitor personalizado
+├─ PLATA*.java          ← Archivos generados por ANTLR
+│
+├─ input/
+│   └─ datos.arg        ← Archivos de entrada (ficheros .arg)
+│
+├─ bin/                 ← Carpeta donde se generarán los .class
+│
+└─ .vscode/
+    ├─ tasks.json
+    ├─ launch.json
+    └─ settings.json
 
 # Compilar y ejecutar automaticamente
 
@@ -15,8 +25,6 @@ Además se utiliza el fichero `settings`par añadir los jar al fichero y configu
 - Para ejecutar el main `ctr+shift+p`-> task, seleccionamos `PLATA: ejecutar`, una vez hecho esto nos pide el fichero input que queramos, por defecto task.arg.
 
 - Para ejecutar cualquier otro task en particular, es igual`ctr+shift+p`-> task, seleccionamos el que queramos.
-
-
 
 # Fichero Task.json
 
@@ -149,8 +157,6 @@ Esta tarea:
     ]
 ```
 
-
-
 ### Fichero task.json completo
 
 ```json
@@ -246,8 +252,6 @@ Como consecuencia:
 
 - El comportamiento es inconsistente y difícil de depurar
 
-
-
 # Fichero settings.json
 
 Modificamos `settings.json` para que VS Code pueda reconocer las librerías externas, mantener el código limpio y guardado automáticamente, y para integrar correctamente ANTLR y las tareas de compilación, asegurando un flujo de trabajo fluido y confiable.
@@ -282,8 +286,42 @@ Modificamos `settings.json` para que VS Code pueda reconocer las librerías exte
   
   - Permite ejecutar compilación y generación de parser con un solo atajo (`Ctrl+Shift+B`), sin tener que configurar tareas manualmente cada vez.
 
+## Compilar al guardar automaticamente
+
+Para ello nos descargamos la extension: `emeraldwalk.runonsave`
+
+- Una vez descargada dentro del dichero settings, añadimos lo siguiente:
+  
+  ```json
+  "emeraldwalk.runonsave": {
+      "commands": [
+          {
+              "match": ".*\\.g4$",
+              "cmd": "antlr4 -no-listener -visitor ${fileBasename}"
+          },
+          {
+              "match": ".*\\.java$",
+              "cmd": "javac -d bin -cp .;C:/Users/Antonio/lib/antlr-4.13.2-complete.jar *.java"
+          }
+      ]
+  }
+  ```
+
 ### Fichero settings.json completo
 
 ```json
-
+{
+    "java.project.referencedLibraries": [
+        "C:/Users/Antonio/lib/*.jar"
+    ],
+    "files.autoSave": "afterDelay", //Guarda automáticamente los archivos
+    "files.autoSaveDelay": 1000, //Después de 1 segundo sin escribir
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit" //ordena los imports al guardar
+    },
+    "antlr4.generation": {
+        "mode": "external" //Indica a la extensión ANTLR que no genere archivos automáticamente. Evita conflictos con  tasks.json.
+    },
+    "task.autoDetect": "on" //Detecta automáticamente tus tasks y permite ejecutarlas con Ctrl+Shift+B.
+}
 ```

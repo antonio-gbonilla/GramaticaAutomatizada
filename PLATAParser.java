@@ -1,4 +1,4 @@
-// Generated from PLATA.g4 by ANTLR 4.13.2
+// Generated from c:/Users/Antonio/Desktop/UPM/TFG/antlrEjercicios/GramaticaAutomatizada/PLATA.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue", "this-escape"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
 public class PLATAParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.13.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -118,9 +118,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_programa; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitPrograma(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterPrograma(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitPrograma(this);
 		}
 	}
 
@@ -188,9 +191,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_sentencia; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitSentencia(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterSentencia(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitSentencia(this);
 		}
 	}
 
@@ -277,9 +283,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_avanza; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitAvanza(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterAvanza(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitAvanza(this);
 		}
 	}
 
@@ -325,9 +334,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_gira; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitGira(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterGira(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitGira(this);
 		}
 	}
 
@@ -366,9 +378,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_para; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitPara(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterPara(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitPara(this);
 		}
 	}
 
@@ -404,9 +419,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_asignacion; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitAsignacion(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterAsignacion(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitAsignacion(this);
 		}
 	}
 
@@ -460,9 +478,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_if_sentencia; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitIf_sentencia(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterIf_sentencia(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitIf_sentencia(this);
 		}
 	}
 
@@ -544,9 +565,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_bucle_while; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitBucle_while(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterBucle_while(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitBucle_while(this);
 		}
 	}
 
@@ -592,9 +616,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_bloque; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitBloque(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterBloque(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitBloque(this);
 		}
 	}
 
@@ -652,9 +679,12 @@ public class PLATAParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_expr; }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitExpr(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterExpr(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitExpr(this);
 		}
 	}
 
@@ -725,9 +755,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode MODULO() { return getToken(PLATAParser.MODULO, 0); }
 		public MultiplicacionExprAritmeticaContext(Expr_aritmeticasContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitMultiplicacionExprAritmetica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterMultiplicacionExprAritmetica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitMultiplicacionExprAritmetica(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -743,9 +776,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode MENOS() { return getToken(PLATAParser.MENOS, 0); }
 		public SumaExprAritmeticaContext(Expr_aritmeticasContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitSumaExprAritmetica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterSumaExprAritmetica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitSumaExprAritmetica(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -756,9 +792,12 @@ public class PLATAParser extends Parser {
 		}
 		public MenosExprAritmeticaContext(Expr_aritmeticasContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitMenosExprAritmetica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterMenosExprAritmetica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitMenosExprAritmetica(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -768,9 +807,12 @@ public class PLATAParser extends Parser {
 		}
 		public AtomicoExprAritmeticaContext(Expr_aritmeticasContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitAtomicoExprAritmetica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterAtomicoExprAritmetica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitAtomicoExprAritmetica(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -780,9 +822,12 @@ public class PLATAParser extends Parser {
 		}
 		public ParentesisExprAritmeticaContext(Expr_aritmeticasContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitParentesisExprAritmetica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterParentesisExprAritmetica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitParentesisExprAritmetica(this);
 		}
 	}
 
@@ -948,9 +993,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode MAYOR() { return getToken(PLATAParser.MAYOR, 0); }
 		public RelacionesExprRelacionalesContext(Expr_relacionalesContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitRelacionesExprRelacionales(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterRelacionesExprRelacionales(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitRelacionesExprRelacionales(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -960,9 +1008,12 @@ public class PLATAParser extends Parser {
 		}
 		public ParentesisExprRelacionalesContext(Expr_relacionalesContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitParentesisExprRelacionales(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterParentesisExprRelacionales(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitParentesisExprRelacionales(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -978,9 +1029,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode DISTINTO() { return getToken(PLATAParser.DISTINTO, 0); }
 		public IgualdadesExprRelacionalesContext(Expr_relacionalesContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitIgualdadesExprRelacionales(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterIgualdadesExprRelacionales(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitIgualdadesExprRelacionales(this);
 		}
 	}
 
@@ -1078,9 +1132,12 @@ public class PLATAParser extends Parser {
 		}
 		public LogicaExprRelacionalesContext(Expr_logicaContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitLogicaExprRelacionales(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterLogicaExprRelacionales(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitLogicaExprRelacionales(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -1094,9 +1151,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode OR() { return getToken(PLATAParser.OR, 0); }
 		public ORExprLogicaContext(Expr_logicaContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitORExprLogica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterORExprLogica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitORExprLogica(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -1105,9 +1165,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode FALSE() { return getToken(PLATAParser.FALSE, 0); }
 		public BoolExprLogicaContext(Expr_logicaContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitBoolExprLogica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterBoolExprLogica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitBoolExprLogica(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -1115,9 +1178,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode ID() { return getToken(PLATAParser.ID, 0); }
 		public IdExprLogicaContext(Expr_logicaContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitIdExprLogica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterIdExprLogica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitIdExprLogica(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -1127,9 +1193,12 @@ public class PLATAParser extends Parser {
 		}
 		public ParentesisExprLogicaContext(Expr_logicaContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitParentesisExprLogica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterParentesisExprLogica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitParentesisExprLogica(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -1143,9 +1212,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode AND() { return getToken(PLATAParser.AND, 0); }
 		public AndExprLogicaContext(Expr_logicaContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitAndExprLogica(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterAndExprLogica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitAndExprLogica(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -1156,9 +1228,12 @@ public class PLATAParser extends Parser {
 		}
 		public NotExprContext(Expr_logicaContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitNotExpr(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterNotExpr(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitNotExpr(this);
 		}
 	}
 
@@ -1316,9 +1391,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode FLOAT() { return getToken(PLATAParser.FLOAT, 0); }
 		public NumeroAtomicoContext(AtomicoContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitNumeroAtomico(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterNumeroAtomico(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitNumeroAtomico(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -1327,9 +1405,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode FALSE() { return getToken(PLATAParser.FALSE, 0); }
 		public BooleanAtomicoContext(AtomicoContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitBooleanAtomico(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterBooleanAtomico(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitBooleanAtomico(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -1337,9 +1418,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode ID() { return getToken(PLATAParser.ID, 0); }
 		public IdAtomicoContext(AtomicoContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitIdAtomico(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterIdAtomico(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitIdAtomico(this);
 		}
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -1347,9 +1431,12 @@ public class PLATAParser extends Parser {
 		public TerminalNode STRING() { return getToken(PLATAParser.STRING, 0); }
 		public StringAtomicoContext(AtomicoContext ctx) { copyFrom(ctx); }
 		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PLATAVisitor ) return ((PLATAVisitor<? extends T>)visitor).visitStringAtomico(this);
-			else return visitor.visitChildren(this);
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).enterStringAtomico(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof PLATAListener ) ((PLATAListener)listener).exitStringAtomico(this);
 		}
 	}
 

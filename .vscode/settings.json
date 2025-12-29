@@ -2,13 +2,27 @@
     "java.project.referencedLibraries": [
         "C:/Users/Antonio/lib/*.jar"
     ],
-    "files.autoSave": "afterDelay", //Guarda automáticamente los archivos
-    "files.autoSaveDelay": 1000, //Después de 1 segundo sin escribir
+    "files.autoSave": "afterDelay", // Guarda automáticamente los archivos
+    "files.autoSaveDelay": 1000, // Después de 1 segundo sin escribir
     "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit" //ordena los imports al guardar
+        "source.organizeImports": "explicit" // Ordena los imports al guardar
     },
     "antlr4.generation": {
-        "mode": "external" //Indica a la extensión ANTLR que no genere archivos automáticamente. Evita conflictos con  tasks.json.
+        "mode": "external" // Indica a la extensión ANTLR que no genere archivos automáticamente. Evita conflictos con tasks.json.
     },
-    "task.autoDetect": "on" //Detecta automáticamente tus tasks y permite ejecutarlas con Ctrl+Shift+B.
+    "task.autoDetect": "on", // Detecta automáticamente tus tasks y permite ejecutarlas con Ctrl+Shift+B.
+
+    // ---------------- Run on Save ----------------
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": ".*\\.g4$",
+                "cmd": "antlr4 -no-listener -visitor ${fileBasename}"
+            },
+            {
+                "match": ".*\\.java$",
+                "cmd": "javac -d bin -cp .;C:/Users/Antonio/lib/antlr-4.13.2-complete.jar *.java"
+            }
+        ]
+    }
 }
